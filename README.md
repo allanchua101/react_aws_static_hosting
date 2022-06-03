@@ -10,7 +10,7 @@ Demo repository for hosting static React websites using AWS, CloudFront, WAF &am
 - SSL and HTTPS support
 - Less operational effort required for managing and operating static site infrastructure.
 - Free public SSL certificate from ACM (If you registered your domain from Route 53)
-- Higher tolerance against L7 DDOS thanks to WAF
+- Higher tolerance against surge of request thanks to CloudFront
 - Repeatable and reliable provisioning process thanks to Terraform
 - Optional IP whitelisting demo for back office related portals
 - Tolerance against single region failures
