@@ -24,6 +24,8 @@ Our demo application is a React web app designed for providing a means of search
 
 ### Build Deployment
 
+![Build Process](https://github.com/allanchua101/react_aws_static_hosting/blob/main/assets/build_process.png)
+
 You could build the React web app and deploy it to the main and failover S3 bucket by running the following command:
 
 ```sh
