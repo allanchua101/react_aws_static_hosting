@@ -1,0 +1,49 @@
+@import "../../../styles/_variables";
+
+.srv.srv--movie-card {
+  background-color: $primary-color;
+  max-width: 320px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  margin-top: 0;
+  cursor: pointer;
+
+  .srv.srv--poster {
+    width: 120px;
+    height: 180px;
+    display: block;
+    margin: auto;
+    transition: transform 250ms;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+
+  .srv.srv-title {
+    color: $white;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .srv.srv-desc {
+    color: $white;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.srv.srv--movie-icon {
+  max-width: 256px;
+  margin-top: 64px;
+}
+
+@media (min-width: 600px) {
+  .srv.srv--movie-card {
+    .srv.srv--poster {
+      width: 150px;
+      height: 225px;
+    }
+  }
+}

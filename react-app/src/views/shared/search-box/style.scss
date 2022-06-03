@@ -1,0 +1,27 @@
+@import "../../../styles/_variables";
+
+.srv.srv--search-wrap {
+  max-width: unset;
+
+  .srv.srv--search-box {
+    border-radius: 4px;
+    color: $primary-color;
+    border-radius: 4px;
+
+    input::placeholder {
+      $color: $secondary-color;
+    }
+  }
+
+  .srv.srv--search-label {
+    color: $secondary-color !important;
+  }
+}
+
+@media (min-width: 600px) {
+  .srv.srv--search-wrap {
+    max-width: 60%;
+    margin: auto;
+    margin-bottom: 24px;
+  }
+}

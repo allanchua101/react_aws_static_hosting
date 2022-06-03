@@ -1,0 +1,29 @@
+@import "../../styles/_variables";
+
+.srv.srv--movie-list {
+  max-width: 98%;
+  margin: auto;
+
+  .srv.srv--movie-list-header {
+    font-size: 48px;
+    line-height: 48px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    color: $fourth-color;
+  }
+
+  .srv.srv--no-movie {
+    color: $primary-color;
+  }
+}
+
+@media (min-width: 600px) {
+  .srv.srv--movie-list {
+    .srv.srv--movie-list-header {
+      font-family: "Bangers", sans-serif;
+      font-size: 48px;
+      line-height: 48px;
+    }
+  }
+}

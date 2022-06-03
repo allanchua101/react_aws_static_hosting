@@ -1,0 +1,12 @@
+@import "styles/_variables";
+
+.srv.srv-main {
+  background-color: $tertiary-color;
+  min-height: calc(100vh + 16px);
+}
+
+@media (max-width: 720px) {
+  .srv.srv--main-container {
+    padding: 0;
+  }
+}

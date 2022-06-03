@@ -1,0 +1,70 @@
+@import "../../../styles/_variables";
+
+.srv.srv--title {
+  font-size: 24px;
+  line-height: 24px;
+  font-family: "Lato", sans-serif;
+  color: $primary-color;
+  margin: 0;
+  min-width: 100%;
+}
+
+.srv.srv--poster-row {
+  max-width: 100%;
+  position: relative;
+  margin-top: 0;
+  padding-top: 0;
+
+  .srv.srv--back {
+    left: 0px;
+  }
+
+  .srv.srv--forward {
+    right: -12px;
+  }
+
+  .srv.srv--back,
+  .srv.srv--forward {
+    position: absolute;
+    top: 35%;
+    background-color: $fourth-color;
+    color: $secondary-color;
+  }
+}
+
+.srv.srv--poster-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-top: 0;
+  margin-top: 0;
+
+  &::-webkit-scrollbar-track {
+    background: $tertiary-color;
+    border: 1px solid $tertiary-color;
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    background: $tertiary-color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: darken($fourth-color, 0.2);
+    border-radius: 2px;
+  }
+}
+
+@media (min-width: 600px) {
+  .srv.srv--poster-wrap {
+    margin-bottom: 32px;
+  }
+
+  .srv.srv--poster-row {
+    .srv.srv--back,
+    .srv.srv--forward {
+      top: calc(40% - 16px);
+    }
+  }
+}

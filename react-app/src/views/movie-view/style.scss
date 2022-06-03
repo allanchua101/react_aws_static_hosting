@@ -1,0 +1,84 @@
+@import "../../styles/_variables.scss";
+
+.srv.srv--movie-view {
+  .srv.srv--movie-view-wrap {
+    padding: 0;
+  }
+
+  .srv.srv--movie-view-poster {
+    min-height: 320px;
+    padding: 12px;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0;
+    background-color: $secondary-color;
+  }
+
+  .srv.srv--overlay {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.2) 71%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+    text-align: center;
+    z-index: 100;
+  }
+
+  .srv.srv--movie-card-content {
+    padding: 16px 32px 32px 32px;
+  }
+
+  .srv.srv--movie-view-header {
+    color: $primary-color;
+    font-size: 36px;
+    margin: 0 !important;
+    z-index: 200;
+  }
+
+  .srv.srv--movie-view-subheader {
+    color: $fourth-color;
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 12px;
+  }
+
+  .srv.srv--movie-view-desc {
+    color: darken($white, 20%);
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 12px;
+    z-index: 200;
+  }
+
+  .srv.srv--movie-view-content {
+    margin: 0;
+  }
+
+  .srv.srv--chip {
+    margin-top: 8px;
+    margin-right: 4px;
+    background-color: $fourth-color;
+    color: $secondary-color;
+  }
+}
+
+@media (min-width: 720px) {
+  .srv.srv--movie-view {
+    max-width: 720px;
+    margin: auto;
+
+    .srv.srv--movie-card-content {
+      padding: 0;
+      padding-top: 32px;
+    }
+  }
+}

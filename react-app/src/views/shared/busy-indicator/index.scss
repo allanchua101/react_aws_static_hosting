@@ -1,0 +1,70 @@
+@import "../../../styles/_variables.scss";
+
+.srv.srv--busy-wrap {
+  margin-top: 64px;
+
+  .srv.srv--loader {
+    width: 144px;
+    height: 144px;
+    margin: auto;
+
+    background: $primary-color;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 1.5s linear infinite;
+
+    &::after {
+      content: "";
+      box-sizing: border-box;
+      position: absolute;
+      left: 18px;
+      top: 30px;
+      width: 36px;
+      height: 36px;
+      color: $secondary-color;
+      background: currentColor;
+      border-radius: 50%;
+      box-shadow: 75px 6px, 30px 66px;
+    }
+  }
+
+  .srv.srv--busy-box {
+    width: 80%;
+  }
+
+  .srv.srv--busy-loader {
+    font-family: "Bangers", sans-serif;
+    font-size: 32px;
+    color: $fourth-color;
+  }
+
+  .srv.srv-busy-indicator {
+    margin-top: 24px;
+
+    > * {
+      background-color: $primary-color;
+    }
+  }
+
+  .srv.srv--loading-icon {
+    max-width: 96px;
+    margin-top: 24px;
+  }
+
+  @media (min-width: 720px) {
+    .srv.srv--busy-box {
+      width: 40%;
+    }
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
