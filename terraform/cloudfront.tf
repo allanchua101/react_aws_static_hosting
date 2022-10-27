@@ -53,6 +53,7 @@ resource "aws_cloudfront_distribution" "website_cdn" {
     allowed_methods  = ["GET", "HEAD", "OPTIONS"]
     cached_methods   = ["GET", "HEAD"]
     target_origin_id = join("-", [local.project_env_name, "origin-group"])
+    response_headers_policy_id = aws_cloudfront_response_headers_policy.security_headers_policy.id
 
     forwarded_values {
       query_string = false
@@ -66,6 +67,54 @@ resource "aws_cloudfront_distribution" "website_cdn" {
     min_ttl                = 0
     default_ttl            = 3600
     max_ttl                = 86400
+  }
+  
+    # Cache behavior with precedence 0
+  ordered_cache_behavior {
+    path_pattern               = "index.html"
+    allowed_methods            = ["GET", "HEAD", "OPTIONS"]
+    cached_methods             = ["GET", "HEAD", "OPTIONS"]
+    target_origin_id           = join("-", [local.project_env_name, "origin-group"])
+    response_headers_policy_id = aws_cloudfront_response_headers_policy.disarm_cache_headers_policy.id
+
+    forwarded_values {
+      query_string = false
+      headers      = ["Origin"]
+
+      cookies {
+        forward = "none"
+      }
+    }
+
+    min_ttl                = 0
+    default_ttl            = 0
+    max_ttl                = 0
+    compress               = true
+    viewer_protocol_policy = "redirect-to-https"
+  }
+
+  # Cache behavior with precedence 1
+  ordered_cache_behavior {
+    path_pattern               = "/"
+    allowed_methods            = ["GET", "HEAD", "OPTIONS"]
+    cached_methods             = ["GET", "HEAD", "OPTIONS"]
+    target_origin_id           = join("-", [local.project_env_name, "origin-group"])
+    response_headers_policy_id = aws_cloudfront_response_headers_policy.disarm_cache_headers_policy.id
+
+    forwarded_values {
+      query_string = false
+      headers      = ["Origin"]
+
+      cookies {
+        forward = "none"
+      }
+    }
+
+    min_ttl                = 0
+    default_ttl            = 0
+    max_ttl                = 0
+    compress               = true
+    viewer_protocol_policy = "redirect-to-https"
   }
 
   viewer_certificate {
