@@ -15,9 +15,21 @@ resource "aws_cloudfront_response_headers_policy" "disarm_cache_headers_policy" 
     }
 
     items {
-      header   = "Cache-Control"
+      header   = "cache-control"
       override = true
-      value    = "no-cache, no-store, max-age=5" # Set to 5 seconds only
+      value    = "no-store"
+    }
+
+    items {
+      header   = "pragma"
+      override = true
+      value    = "no-cache"
+    }
+
+    items {
+      header   = "e-tag"
+      override = true
+      value    = "none"
     }
   }
 
