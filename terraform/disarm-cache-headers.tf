@@ -17,7 +17,7 @@ resource "aws_cloudfront_response_headers_policy" "disarm_cache_headers_policy" 
     items {
       header   = "cache-control"
       override = true
-      value    = "no-store"
+      value    = "no-cache, must-revalidate"
     }
 
     items {
@@ -27,9 +27,15 @@ resource "aws_cloudfront_response_headers_policy" "disarm_cache_headers_policy" 
     }
 
     items {
-      header   = "e-tag"
+      header   = "etag"
       override = true
       value    = "none"
+    }
+
+    items {
+      header   = "expires"
+      override = true
+      value    = "Wed, 1 Jan 2020 00:00:00 GMT"
     }
   }
 
