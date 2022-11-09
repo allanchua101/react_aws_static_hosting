@@ -50,3 +50,7 @@ AWS_PROFILE="foo-profile" \
   MAIN_DISTRIBUTION_ID="YOUR_CF_DISTRIBUTION_ID_HERE" \
   ./003_build.sh
 ```
+
+## FAQs
+
+- How to disable WAF on this template? -> WAF could easily disable by removing the files associated to WAF (waf_ipset.tf, waf_rule_group.tf, waf_web_acl.tf) and removing line #8 on cloudfront.tf file that associates the WAF with the projects CloudFront distribution.
