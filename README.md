@@ -5,7 +5,7 @@ Demo repository for hosting a React web app using Terraform, AWS, CloudFront, WA
 ![Static Site Hosting on AWS](https://github.com/allanchua101/react_aws_static_hosting/blob/main/assets/waf_s3_cf_cf-origins.jpg)
 
 <p align="center">
-  View a larger version of the architecture diagram @ <a href="https://imgur.com/qeK8mnC.jpg">imgur</a>.
+  View a larger version of the architecture diagram @ <a href="https://github.com/allanchua101/react_aws_static_hosting/blob/main/assets/waf_s3_cf_cf-origins.jpg">assets folder</a>.
 </p>
 
 ### Design Advantages
