@@ -20,6 +20,7 @@ Demo repository for hosting a React web app using Terraform, AWS, CloudFront, WA
 - Optional IP whitelisting demo for back office related portals
 - Tolerance against single region failures
 - Security headers are attached using CloudFront origin policies.
+- Prevent caching of index.html files that causes references to obsolete js and css assets.
 
 ### Demo Application
 
