@@ -38,9 +38,9 @@ resource "aws_cloudfront_response_headers_policy" "security_headers_policy" {
       preload                    = true
       override                   = true
     }
-    # Research CSP policy
-    # content_security_policy {
-    #   override                = true
-    # }
+    content_security_policy {
+      content_security_policy = "frame-ancestors 'none'; default-src 'none'; img-src 'self'; script-src 'self'; style-src 'self'; object-src 'none'"
+      override = true
+    }
   }
 }
