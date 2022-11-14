@@ -1,6 +1,6 @@
 # React AWS Static Site Hosting
 
-Demo repository for hosting a React web app using Terraform, AWS, CloudFront, WAF &amp; [CloudFront Response Header Policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/creating-response-headers-policies.html).
+Demo repository for provisioning static site infrastructure and deploying React web apps using Terraform, AWS, CloudFront, WAF &amp; [CloudFront Response Header Policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/creating-response-headers-policies.html).
 
 ![Static Site Hosting on AWS](https://github.com/allanchua101/react_aws_static_hosting/blob/main/assets/diagram-v6.png)
 
