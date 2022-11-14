@@ -60,6 +60,7 @@ AWS_PROFILE="foo-profile" \
 - Run Jest-based Component Tests
 - Storage of build artifacts in an S3 bucket.
 - Make Terraform provider profiles dynamic
+- Create a compilation-demo for Vite consumers
 
 ## FAQs
 
