@@ -53,10 +53,12 @@ AWS_PROFILE="foo-profile" \
 
 ## Future Improvements
 
-- We could add version injections step in the build process
+- We could add version injection step in the build process
 - We could add a WAF-less template to accomodate those who have public exposure needs.
 - Serverless WAF honeypot samples
 - SAST and DAST steps for CI/CD demos
+- Run Jest-based Component Tests
+- Storage of build artifacts in an S3 bucket.
 - Make Terraform provider profiles dynamic
 
 ## FAQs
