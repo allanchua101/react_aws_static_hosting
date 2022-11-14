@@ -28,6 +28,10 @@ Demo repository for provisioning static site infrastructure and deploying React 
 
 Our demo application is a React web app designed for providing a means of searching movies so that you don't get subjected to Advertisements and various IP trackers.
 
+### Setup `.env` configuration
+
+In order to build the sample app, you will have to create environment variable file(s) for your desired environment(s) by copying the `.env.sample` file to either `.env`, `.env.local`, `.env.development`, `.env.production`. This process will require the creation of an API key from [The Movie Database API portal](https://www.themoviedb.org/signup).  
+
 ### Local Build and Deploy Process
 
 ![Build Process](https://github.com/allanchua101/react_aws_static_hosting/blob/main/assets/build_process.png)
