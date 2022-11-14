@@ -12,13 +12,13 @@ Demo repository for provisioning static site infrastructure and deploying React 
 
 - Static asset caching
 - SSL and HTTPS support
-- Less effort required for managing and operating static site infrastructure.
-- Lower cost of static asset distribution compared to VM and container based architectures.
+- Less effort required in managing and operating static site infrastructure.
+- Lower cost of static asset distribution compared to VM and container-based architectures.
 - Free public SSL certificate from AWS certificate manager.
-- Higher tolerance against surge of requests thanks to CloudFront traffic distribution across pops
-- Repeatable, reliable and scalable provisioning process thanks to Terraform and Terraform environment-specific variable files.
-- Optional static IP whitelisting for back office-related portals
-- Tolerance against single region failures
+- Higher tolerance against surge of requests. (Thanks to CloudFront traffic distribution across POPs)
+- Repeatable, reliable and scalable provisioning process thanks to Terraform and environment-specific variable files.
+- Optional static IP whitelisting for back office-related portals (WAF, Web ACLs and IP sets)
+- Tolerance against single region failures. (Thanks to CloudFront origin groups)
 - Security headers are applied on CloudFront responses using [CloudFront response header policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/creating-response-headers-policies.html), this is previously done using lambda@edge which requires intermediate request processing and extra fees. CloudFront does that for us with no additional processing fees. 
 - Prevent caching of `index.html` files which often results to referencing of obsolete js and css assets for React and Vue apps.
 
