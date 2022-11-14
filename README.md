@@ -19,7 +19,7 @@ Demo repository for hosting a React web app using Terraform, AWS, CloudFront, WA
 - Repeatable, reliable and scalable provisioning process thanks to Terraform and Terraform environment-specific variable files.
 - Optional static IP whitelisting for back office-related portals
 - Tolerance against single region failures
-- Security headers are applied on CloudFront responses using [CloudFront response header policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/creating-response-headers-policies.html)
+- Security headers are applied on CloudFront responses using [CloudFront response header policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/creating-response-headers-policies.html), this is previously done using lambda@edge which requires intermediate request processing and extra fees. CloudFront does that for us with no additional processing fees. 
 - Prevent caching of `index.html` files which often results to referencing of obsolete js and css assets for React and Vue apps.
 
 ### Demo Application
