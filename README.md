@@ -12,15 +12,15 @@ Demo repository for hosting a React web app using Terraform, AWS, CloudFront, WA
 
 - Static asset caching
 - SSL and HTTPS support
-- Less operational effort required for managing and operating static site infrastructure.
-- Lower cost of static asset distribution compared to VM and container based variants.
-- Free public SSL certificate from ACM (If you registered your domain from Route 53)
-- Higher tolerance against surge of request thanks to CloudFront
-- Repeatable and reliable provisioning process thanks to Terraform
-- Optional IP whitelisting demo for back office related portals
+- Less effort required for managing and operating static site infrastructure.
+- Lower cost of static asset distribution compared to VM and container based architectures.
+- Free public SSL certificate from AWS certificate manager.
+- Higher tolerance against surge of requests thanks to CloudFront traffic distribution across pops
+- Repeatable, reliable and scalable provisioning process thanks to Terraform and Terraform environment-specific variable files.
+- Optional static IP whitelisting for back office-related portals
 - Tolerance against single region failures
-- Security headers are attached using CloudFront origin policies.
-- Prevent caching of index.html files that causes references to obsolete js and css assets.
+- Security headers applied attached using CloudFront origin policies (CSP still pending)
+- Prevent caching of `index.html` files which often results to referencing of obsolete js and css assets for React and Vue apps.
 
 ### Demo Application
 
