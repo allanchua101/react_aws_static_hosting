@@ -57,6 +57,7 @@ AWS_PROFILE="foo-profile" \
 - We could add a WAF-less template to accomodate those who have public exposure needs.
 - Serverless WAF honeypot samples
 - SAST and DAST steps for CI/CD demos
+- Make Terraform provider profiles dynamic
 
 ## FAQs
 
