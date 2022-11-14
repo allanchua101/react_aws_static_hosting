@@ -51,6 +51,13 @@ AWS_PROFILE="foo-profile" \
   ./003_build.sh
 ```
 
+## Future Improvements
+
+- We could add version injections step in the build process
+- We could add a WAF-less template to accomodate those who have public exposure needs.
+- Serverless WAF honeypot samples
+- SAST and DAST steps for CI/CD demos
+
 ## FAQs
 
 - How to disable WAF on this template? -> WAF could easily be disabled by removing the files associated to WAF (`waf_ipset.tf`, `waf_rule_group.tf`, `waf_web_acl.tf`) and removing line #8 on `cloudfront.tf` file that associates the WAF with the projects CloudFront distribution.
