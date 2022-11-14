@@ -2,10 +2,10 @@
 
 Demo repository for hosting a React web app using Terraform, AWS, CloudFront, WAF &amp; CloudFront Security Header Policies.
 
-![Static Site Hosting on AWS](https://github.com/allanchua101/react_aws_static_hosting/blob/main/assets/waf_s3_cf_cf-origins.jpg)
+![Static Site Hosting on AWS](https://github.com/allanchua101/react_aws_static_hosting/blob/main/assets/diagram-v6.png)
 
 <p align="center">
-  View a larger version of the architecture diagram @ <a href="https://github.com/allanchua101/react_aws_static_hosting/blob/main/assets/waf_s3_cf_cf-origins.jpg">assets folder</a>.
+  View a larger version of the architecture diagram @ <a href="https://github.com/allanchua101/react_aws_static_hosting/blob/main/assets/diagram-v6.png">assets folder</a>.
 </p>
 
 ### Design Advantages
