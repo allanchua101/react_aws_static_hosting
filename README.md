@@ -1,6 +1,6 @@
 # React AWS Static Site Hosting
 
-Demo repository for hosting a React web app using Terraform, AWS, CloudFront, WAF &amp; CloudFront Origin Policies.
+Demo repository for hosting a React web app using Terraform, AWS, CloudFront, WAF &amp; CloudFront Security Header Policies.
 
 ![Static Site Hosting on AWS](https://github.com/allanchua101/react_aws_static_hosting/blob/main/assets/waf_s3_cf_cf-origins.jpg)
 
@@ -19,7 +19,7 @@ Demo repository for hosting a React web app using Terraform, AWS, CloudFront, WA
 - Repeatable, reliable and scalable provisioning process thanks to Terraform and Terraform environment-specific variable files.
 - Optional static IP whitelisting for back office-related portals
 - Tolerance against single region failures
-- Security headers applied attached using CloudFront origin policies (CSP still pending)
+- Security headers are applied on CloudFront responses using [CloudFront security header policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-response-headers-policies.html)
 - Prevent caching of `index.html` files which often results to referencing of obsolete js and css assets for React and Vue apps.
 
 ### Demo Application
