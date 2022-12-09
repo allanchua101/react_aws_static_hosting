@@ -122,6 +122,18 @@ resource "aws_cloudfront_distribution" "website_cdn" {
     acm_certificate_arn            = var.acm_cert_arn
     ssl_support_method             = "sni-only"
   }
+  
+  custom_error_response {
+    error_code = 404
+    response_code = 200
+    response_page_path = "error.html"
+  }
+  
+  custom_error_response {
+    error_code = 403
+    response_code = 200
+    response_page_path = "error.html"
+  }
 
   tags = {
     Name = join("-", [local.project_env_name, "cf-distribution"])
